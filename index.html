@@ -1,35 +1,37 @@
 <html lang="en">
-  
-<head>
-  <meta charset="utf-8">  <!-- May want to consider expanding for SEO-->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Dave Sommerville">
-  <meta name="description" content="Explore Unreal City - a hub for web development and design tips. Learn HTML, CSS, JavaScript, and more.">
-  <meta name="theme-color" content="#ffffff">
-  <title>Notes App</title>
-	<link rel="icon" href="./src/img/favicon.png" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <!--    Local Stylesheets -->
-  <link rel="stylesheet" href="./src/css/reset.css" media="all">
-  <link rel="stylesheet" href="./src/css/style.css" media="all">
-	<script src="./src/js/script.js" defer></script>
-    
-</head>
-<body>
-	<main class="flex container f-col">
-		<h1>My Contacts</h1>
-		<form class="flex">
-			<input type="text" placeholder="Full Name" class="name-input">
-			<input type="text" placeholder="City" class="city-input">
-			<input type="text" placeholder="Email Address" class="email-input">
-			<button type="button" class="submit-btn">
-				<i class="fa-solid fa-plus"></i>
-			</button>
-		</form>
-		<section class="card-wrapper"></section>
-	</main>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Dave Sommerville">
+		<meta name="description" content="Explore Unreal City - a hub for web development and design tips. Learn HTML, CSS, JavaScript, and more.">
+		<meta name="theme-color" content="#ffffff">
+		<title>Contacts</title>
+		<link rel="icon" href="./src/img/favicon.png" type="image/x-icon">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+		<link rel="stylesheet" href="./src/css/reset.css" media="all">
+		<link rel="stylesheet" href="./src/css/style.css" media="all">
+		<script src="./src/js/script.js" defer></script>
+			
+	</head>
+	<body>
+		<main class="flex container f-col">
+			<h1>My Contacts</h1>
+			<section class="error-wrapper">
+				<p class="error-catcher"></p>
+			</section>
+			<form class="flex">
+				<input type="text" placeholder="Full Name" class="name-input">
+				<input type="text" placeholder="City" class="city-input">
+				<input type="text" placeholder="Email Address" class="email-input">
+				<button type="button" class="submit-btn">ADD</button>
+			</form>
+			<section class="card-wrapper"></section>
+			<section class="counter-wrapper flex">
+				<p><span class="contact-counter"></span></p>
+			</section>
+		</main>
+	</body>
 </html>

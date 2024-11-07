@@ -1,11 +1,11 @@
 @charset "utf-8";
 
+/*------------------------------------------------------------------------->
+	Default Control and Roots 
+<-------------------------------------------------------------------------*/
+
 html {
 	font-family: "Poppins", "Inter", Arial, sans-serif;
-}
-
-body {
-	background-color: var(--app-bg-color);
 }
 a {
   text-decoration: none;
@@ -24,12 +24,14 @@ input, button {
 	--app-text-color: #fefefe;
 }
 
+/*------------------------------------------------------------------------->
+	Utility Classes
+<-------------------------------------------------------------------------*/
+
 .container {
 	width: min(100% - 30px, 1200px);
 	margin-inline: auto;
 }
-
-
 
 .flex {
 	display: flex;
@@ -39,54 +41,30 @@ input, button {
 	flex-direction: column;
 }
 
-h1 {
-	font-size: 2rem;
-	color: var(--app-text-color);
+/*------------------------------------------------------------------------->
+	Base Structure
+<-------------------------------------------------------------------------*/
+
+body {
+	background-color: var(--app-bg-color);
 }
 
-
 main {
-	height: 100svh;	width: 100%;
+	height: 100svh;	
+	width: 100%;
 	align-items: center;
 	justify-content: center;
 }
 
-form {
-	height: 100px;
-	width: 1200px;
-	justify-content: space-between;
-	padding: 25px;
-	background-color: var(--app-bg-color);
-}
+/*------------------------------------------------------------------------->
+	Text Styling
+<-------------------------------------------------------------------------*/
 
-section {
-	height: 600px; width: 1200px;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-	grid-gap: 20px;
-	background-color: var(--app-bg-color);
-	padding: 25px;
-	border-radius: var(--app-border-rad);
-}
-
-
-.submit-btn,
-input {
-  height: 40px;
-  font-size: 1.2rem;
-	background-color: var(--app-input-bg);
-  text-align: center;
+h1 {
+	font-size: 3.5rem;
+ 	height: 120px; 
+	line-height: 120px;
 	color: var(--app-text-color);
-  border-radius: var(--app-border-rad);
-}
-
-.submit-btn {
-	width: 40px;
-	background-color: var(--app-btn-color);
-}
-
-input {
-	width: 300px;
 }
 
 p {
@@ -98,35 +76,134 @@ p {
 	}
 }
 
-div {
+/*------------------------------------------------------------------------->
+	Input Fields
+<-------------------------------------------------------------------------*/
+.error-wrapper {
+	height: 40px;
+	width: 100%;
+	text-align: center;
+}
+
+.error-catcher {
+	color: #b11;
+	font-weight: 600;
+}
+
+.error-styling {
+	border: 1px solid #b11;
+
+	&:focus {
+		caret-color: #b11;;
+	}
+}
+
+form {
 	height: 150px;
-	width: 250px;
+	width: 1200px;
+	padding: 25px;
+	justify-content: space-between;
+	background-color: var(--app-bg-color);
+}
+
+.submit-btn,
+input {
+  height: 46px;
+  font-size: 1.2rem;
+	padding-left: 5px;
+	background-color: var(--app-input-bg);
+	color: var(--app-text-color);
+  border-radius: var(--app-border-rad);
+}
+
+input { 
+	margin-right: 20px;
+	width: 340px;
+}
+
+.submit-btn {
+	width: 86px;
+	text-align: center;
+	background-color: var(--app-btn-color);
+}
+
+
+/*------------------------------------------------------------------------->
+	Contact Creation/Display 
+<-------------------------------------------------------------------------*/
+
+.card-wrapper {
+	height: 450px; 
+	width: 1200px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+	grid-template-rows: repeat(4, 1fr);
+	grid-gap: 20px;
+	padding: 25px;
+	background-color: var(--app-bg-color);
+	border-radius: var(--app-border-rad);
+}
+
+div {
+	height: 125px;
+	width: 100%;
 	background-color: var(--app-input-bg);
 	border-radius: var(--app-border-rad);
-	padding: 25px; 
+	overflow: hidden;
+	padding: 20px; 
 	position: relative;
+	transition: all 0.5s ease;
 }
 
 div:hover {
-	scale: 1.05;
+	scale: 1.02;
+}
+
+.delete-btn, .email-btn {
+	width: 20px;
+	height: 20px;
+	line-height: 30px;
+	color: var(--app-text-color);
+  border-radius: var(--app-border-rad);
+	position: absolute;
+	transition: all 0.5s ease;
+
+}
+
+.email-btn {
+	top: 28px;
+	right: 60px;
+
+	&:hover {
+	color: #1b1;
+	}
+
+	i {
+		font-size: 1rem;
+	}
 }
 
 .delete-btn {
-	width: 40px;
-	height: 40px;
-	color: var(--app-text-color);
-  border-radius: var(--app-border-rad);
-	position: absolute;
-	right: 5px;
-	top: 5px;
-}
+	top: 25px;
+	right: 20px;
 
-a {
-	width: 40px;
-	height: 40px;
-	color: var(--app-text-color);
-  border-radius: var(--app-border-rad);
-	position: absolute;
-	right: 5px;
-	bottom: 5px;
+	cursor: pointer;
+	&:hover {
+	 color: #b11
+	}
+
+	i {
+		font-size: 1rem;
+	}
+}
+/*------------------------------------------------------------------------->
+	Total Contacts Count
+<-------------------------------------------------------------------------*/
+
+.counter-wrapper {
+	height: calc(100% - 120px - 40px - 150px - 450px);
+	width: 500px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
 }
